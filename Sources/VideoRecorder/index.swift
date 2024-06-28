@@ -1,5 +1,6 @@
 import AppKit
 import ArgumentParser
+import ExampleVideo
 import Foundation
 import StreamUI
 import SwiftUI
@@ -8,9 +9,9 @@ import VideoViews
 @Observable
 class StreamUISettings {
     var fps: Int32 = 30
-    var width: CGFloat = 1080
-    var height: CGFloat = 1920
-    var captureDuration: Int = 20
+    var width: CGFloat = 1920
+    var height: CGFloat = 1080
+    var captureDuration: Int = 15
     var saveVideoFile: Bool = true
 
     var livestreamSettings: [LivestreamSettings] = []
@@ -83,12 +84,9 @@ enum MyNewExecutable {
             height: settings.height,
             displayScale: 2.0,
             captureDuration: .seconds(settings.captureDuration),
-            saveVideoFile: settings.saveVideoFile,
-            livestreamSettings: [
-                .init(rtmpConnection: "rtmp://localhost/live", streamKey: "streamKey")
-            ]
+            saveVideoFile: settings.saveVideoFile
         ) {
-            SoundTestView()
+            ExampleVideo()
         }
 
         let controlledClock = recorder.controlledClock
