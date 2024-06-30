@@ -6,5 +6,7 @@ Get started with StreamUI &amp; programatically building videos with SwiftUI
 
 
 
-https://github.com/StreamUI/streamui-starter/assets/775808/da8f639d-7a53-4f3b-9194-36523883eee3
+
+https://github.com/StreamUI/streamui-livestream/assets/775808/d5f7b94f-1e0a-448a-b45b-e911c99b9055
+
 
