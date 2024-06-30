@@ -14,6 +14,8 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/StreamUI/StreamUI.git", from: "0.1.2"),
         .package(url: "https://github.com/apple/swift-argument-parser.git", from: "1.4.0"),
+        .package(url: "https://github.com/Kyome22/SystemInfoKit.git", from: "3.2.0"),
+        .package(url: "https://github.com/ably/ably-cocoa", from: "1.2.32"),
 
     ],
     targets: [
@@ -31,6 +33,8 @@ let package = Package(
             name: "ExampleVideo",
             dependencies: [
                 .product(name: "StreamUI", package: "StreamUI"),
+                .product(name: "SystemInfoKit", package: "SystemInfoKit"),
+                .product(name: "Ably", package: "ably-cocoa"),
             ],
             path: "Sources/ExampleVideo"
         ),
